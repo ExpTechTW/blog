@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
+import { REPO_NAME } from "./config";
 
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? "/blog" : "";
+const basePath = isProduction ? `/${REPO_NAME}` : "";
 
 const nextConfig: NextConfig = {
   output: "export",
